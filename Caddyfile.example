@@ -1,0 +1,5 @@
+# Replace all four example hostnames with names you control.
+# Start Node with HOME_ORIGIN=https://ccna.example.com and PORT=8080.
+ccna.example.com, topics.ccna.example.com, exam.ccna.example.com, weakness.ccna.example.com {
+    reverse_proxy 127.0.0.1:8080
+}
