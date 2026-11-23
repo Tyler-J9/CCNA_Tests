@@ -29,6 +29,16 @@ Modern Chromium browsers resolve `.localhost` names to loopback. If your browser
 
 The three modes use a shared browser-storage bridge at the dashboard origin. The bridge accepts messages only from the configured mode origins. Results remain in the browser; the Node server does not receive or store them. Each origin keeps its active unfinished session locally. Changing the scheme, hostname, browser profile, or port changes the local storage context. A privacy setting that blocks the bridge can require Export / Import instead.
 
+## Run with Docker
+
+With Docker Desktop running, open a terminal in this folder and run:
+
+```powershell
+docker compose up -d --build
+```
+
+Then open **http://ccna.localhost:8080**. Docker runs Node.js in a container, so Node.js does not need to be installed on Windows. The topic, exam, and weakness subdomains work as in the local Node setup. See [`DOCKER.md`](./DOCKER.md) for shutdown, logs, and troubleshooting instructions.
+
 ## Modes and behavior
 
 - **Topic practice:** choose any combination of topics, session length, format, and unattempted-only filtering. Select an answer, then press **Check answer** for immediate feedback and a Cisco documentation link. Checking commits that attempt; moving away before checking does not score it.
